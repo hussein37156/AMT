@@ -8,7 +8,7 @@ function [Te] = search(array, input, load)
     Y = [array(idx(1),2); array(idx(2),2)];
 
     % Perform interpolation with extrapolation enabled
-    Te = interp1(X, Y, input, 'linear', 'extrap') * load;
+    Te = interp1(X, Y, input, 'linear', 'extrap');
 
     if Te<0
         Te=0;
